@@ -7,7 +7,7 @@ $ rosdep install -i --from-path src --rosdistro humble -y
 ```
 Build your new package
 ```
-$ colcon build --packages-select ros2_kdl_package
+$ colcon build
 ```
 Source the setup files
 ```
