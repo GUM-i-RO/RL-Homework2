@@ -1,10 +1,4 @@
-# ros2_kdl_package
-
-## :package: About
-
-This package contains the tutorial code to create and run your C++ node using KDL.
-
-Created following [ROS 2 Documentation](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces.html)
+# RL-Homework2
 
 ## :hammer: Build
 Clone this package in the `src` folder of your ROS 2 workspace. Check for missing dependencies
@@ -21,12 +15,24 @@ $ . install/setup.bash
 ```
 
 ## :white_check_mark: Usage
-Run the node
+First of all, launch Rviz with Gazebo with the launch file
 ```
-$ ros2 run ros2_kdl_package ros2_kdl_node
+$ ros2 launch iiwa_bringup iiwa.launch.py
 ```
 
-By default the node publishes joint position commands. To use the velocity commands 
+Run the node specifing what trajectory and how it must be computed (0, 1, 2 ,3): 
+Linear trajectory using trapezoidal velocity profile (0), 
+Linear trajectory using cubic polynomial (1), 
+Circular trajectory using trapezoidal velocity profile (2),
+Circular trajectory using cubic polynomial (3),
+For istance if you want to use the linear with cubic then run
+```
+$ ros2 run ros2_kdl_package ros2_kdl_node 1
+```
+Eventually insert by terminal the acceleration duration of the trapezoidal velocity profile and/or the radius of the circular trajectory
+(recomended values are acc_duration = 0.5 and traj_radius = 0.2)
+
+Note that by default the node publishes joint position commands. To use the velocity commands 
 ```
 $ ros2 run ros2_kdl_package ros2_kdl_node --ros-args -p cmd_interface:=velocity
 ```
