@@ -41,7 +41,8 @@ Circular trajectory using cubic polynomial (3),
 $ ros2 run ros2_kdl_package ros2_kdl_node 3
 ```
 
-Note that by default the node publishes joint position commands. To use the velocity commands 
+Note that by default the node publishes joint position commands.  
+**To use the velocity commands**
 ```
 $ ros2 run ros2_kdl_package ros2_kdl_node --ros-args -p cmd_interface:=velocity
 ```
@@ -50,7 +51,7 @@ in this case the robot must be launched with the velocity interface
 $ ros2 launch iiwa_bringup iiwa.launch.py command_interface:="velocity" robot_controller:="velocity_controller"
 ```
 
-To use the effort commands 
+**To use the effort commands** 
 ```
 $ ros2 run ros2_kdl_package ros2_kdl_node --ros-args -p cmd_interface:=effort
 ```
