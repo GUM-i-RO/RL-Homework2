@@ -20,11 +20,11 @@ First of all, launch Rviz with Gazebo with the launch file
 $ ros2 launch iiwa_bringup iiwa.launch.py
 ```
 
-Run the node specifing what trajectory and how it must be computed (0, 1, 2 ,3): 
-Linear trajectory using trapezoidal velocity profile (0), 
-Linear trajectory using cubic polynomial (1), 
-Circular trajectory using trapezoidal velocity profile (2),
-Circular trajectory using cubic polynomial (3),
+Run the node specifing what trajectory and how it must be computed (0, 1, 2 ,3):  
+Linear trajectory using trapezoidal velocity profile (0),  
+Linear trajectory using cubic polynomial (1),  
+Circular trajectory using trapezoidal velocity profile (2), 
+Circular trajectory using cubic polynomial (3), 
 For istance if you want to use the linear with cubic then run
 ```
 $ ros2 run ros2_kdl_package ros2_kdl_node 1
